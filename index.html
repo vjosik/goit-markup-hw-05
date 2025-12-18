@@ -590,7 +590,7 @@
           </ul>
         </div>
         <div class="subscribe">
-          <p class="social-title">Social media</p>
+          <p class="social-title">Subscribe</p>
           <form class="subscribe-form" action="">
             <label class="subscribe-label" for="userEmailFooter">
               <input
@@ -603,7 +603,7 @@
             </label>
             <button class="order-button btn-sub" type="submit">
               Subscribe
-              <svg class="btn-sub-icon" width="24" height="20">
+              <svg class="btn-sub-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>
@@ -611,7 +611,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-btn-icon" width="8px" height="8px">
@@ -623,30 +623,16 @@
         </p>
         <form class="modal-form" name="reviewForm">
           <div class="modal-form-field">
-            <label class="modal-form-label" for="username">Name</label>
+            <label class="modal-form-label" for="user-name">Name</label>
             <div class="modal-form-wrapper">
               <input
                 type="text"
                 class="modal-form-input"
-                name="username"
-                id="username"
+                name="user-name"
+                id="user-name"
               />
               <svg class="modal-form-icon" width="18px" height="24px">
                 <use href="./images/icons.svg#icon-person-black"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="modal-form-field">
-            <label class="modal-form-label" for="useremail">Email</label>
-            <div class="modal-form-wrapper">
-              <input
-                type="text"
-                class="modal-form-input"
-                name="useremail"
-                id="useremail"
-              />
-              <svg class="modal-form-icon" width="18px" height="24px">
-                <use href="./images/icons.svg#icon-email-black-"></use>
               </svg>
             </div>
           </div>
@@ -665,15 +651,29 @@
             </div>
           </div>
           <div class="modal-form-field">
-            <label class="modal-form-label" for="usercomment"> Comment </label>
+            <label class="modal-form-label" for="useremail">Email</label>
             <div class="modal-form-wrapper">
-              <textarea
-                class="modal-text"
-                name="usercomment"
-                id="usercomment"
-                placeholder="Text input"
-              ></textarea>
+              <input
+                type="text"
+                class="modal-form-input"
+                name="useremail"
+                id="useremail"
+              />
+              <svg class="modal-form-icon" width="18px" height="24px">
+                <use href="./images/icons.svg#icon-email-black-"></use>
+              </svg>
             </div>
+          </div>
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-comment"> Comment </label>
+
+            <textarea
+              class="modal-text"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+            ></textarea>
+
             <div class="modal-form-agreement">
               <input
                 class="agreement-input visually-hidden"

@@ -580,7 +580,7 @@ ul {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-sub-icon{
+.btn-sub-icon {
   width: 24px;
   height: 24px;
   margin-left: 16px;
@@ -588,7 +588,7 @@ ul {
 /*Footer end*/
 /* #region  */
 .backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(46, 47, 66, 0.4);
 
   position: fixed;
   top: 0;
@@ -602,7 +602,8 @@ ul {
 
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -613,11 +614,11 @@ ul {
 }
 
 .modal-form-field {
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 
 .modal {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -629,8 +630,10 @@ ul {
   overflow-y: auto;
   opacity: 0;
   padding: 72px 24px 24px;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .backdrop.is-open .modal {
@@ -645,21 +648,32 @@ ul {
   top: 24px;
   right: 24px;
 
-  padding: 8px;
+  width: 24px;
+  height: 24px;
+
+  padding: 0;
   border: 1px solid #0000001a;
-  border-radius: 100%;
+  border-radius: 50%;
+
+  align-items: center;
+  justify-content: center;
 
   background-color: #e7e9fc;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  cursor: pointer;
 }
 
 .modal-btn-icon {
   width: 8px;
   height: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
+  border: none;
   fill: #fff;
   background-color: #404bbf;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -672,8 +686,10 @@ ul {
   font-style: Medium;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 2%;
+  letter-spacing: 0.02em;
   text-align: center;
+  color: #2e2f42;
+  margin-bottom: 16px;
 }
 
 .modal-form-wrapper {
@@ -683,9 +699,10 @@ ul {
   display: block;
   width: 100%;
   height: 40px;
-  padding: 8px 34px;
+  padding-left: 38px;
   border-radius: 4px;
-  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: transparent;
 }
@@ -703,19 +720,25 @@ ul {
 
 .modal-form-icon {
   position: absolute;
+  width: 18px;
+  height: 24px;
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
 }
 
 .modal-form-label {
+  display: block;
+  margin-bottom: 4px;
+
   font-family: Roboto;
   font-weight: 400;
   font-style: Regular;
   font-size: 12px;
 
   line-height: 14px;
-  letter-spacing: 4%;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 
   color: #8e8f99;
 }
@@ -725,16 +748,17 @@ ul {
   width: 100%;
   height: 120px;
   resize: none;
-  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 13px;
 
+  color: rgba(46, 47, 66, 0.4);
   font-family: Roboto;
   font-weight: 400;
   font-style: Regular;
   font-size: 12px;
 
   line-height: 14px;
-  letter-spacing: 4%;
+  letter-spacing: 0.04em;
   outline: transparent;
 }
 
