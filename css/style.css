@@ -749,17 +749,18 @@ ul {
   height: 120px;
   resize: none;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 13px;
+  border-radius: 4px;
+  background-color: transparent;
 
-  color: rgba(46, 47, 66, 0.4);
   font-family: Roboto;
   font-weight: 400;
   font-style: Regular;
   font-size: 12px;
-
+  color: rgba(46, 47, 66, 0.4);
   line-height: 14px;
   letter-spacing: 0.04em;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-box {
@@ -812,6 +813,8 @@ ul {
 }
 
 .custom-checkbox-icon {
+  width: 10px;
+  height: 8px;
   fill: transparent;
 }
 .agreement-input:checked
