@@ -530,11 +530,12 @@ ul {
 }
 
 .subscribe {
-  width: 100%;
+  margin-left: auto;
 }
 .subscribe-form {
   display: flex;
   gap: 24px;
+
   justify-content: center;
   align-items: center;
 }
@@ -574,6 +575,7 @@ ul {
   height: 40px;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
 .btn-sub:hover,
